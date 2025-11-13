@@ -3,10 +3,9 @@ import type { ApiResponse } from "../../shared/api-response";
 import { generalException } from "../../shared/error/general.exception";
 import type { Cliente } from "../../types/cliente.type";
 
-
-export const RegistrarClienteAction = async (cliente: Cliente): Promise<ApiResponse<boolean>> => {
+export const ConsultarClienteAction = async (documento: string): Promise<ApiResponse<Cliente>> => {
   try {
-    const { data } = await billeteraApi.post<ApiResponse<any>>('clientes', cliente)
+    const { data } = await billeteraApi.get<ApiResponse<Cliente>>(`clientes?documento=${documento}`)
 
     return data
   } catch (error) {

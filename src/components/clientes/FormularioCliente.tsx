@@ -55,11 +55,14 @@ const FormularioCliente = () => {
         <label 
           htmlFor="documento"
           className="px-2"
-        >Documento:</label>
+        >
+          Documento:
+        </label>
         <input
           id="documento" 
           type="text" 
           className="border border-slate-300 p-2 rounded-lg"
+          placeholder="da91ed58-7810-4911-9889-1df00d480ebd"
           value={cliente.documento}
           onChange={handleChange}
         />
@@ -69,11 +72,14 @@ const FormularioCliente = () => {
         <label 
           htmlFor="nombres"
           className="px-2"
-        >Nombres:</label>
+        >
+          Nombres:
+        </label>
         <input
           id="nombres" 
           type="text" 
           className="border border-slate-300 p-2 rounded-lg"
+          placeholder="John Doe"
           value={cliente.nombres}
           onChange={handleChange}
         />
@@ -83,11 +89,14 @@ const FormularioCliente = () => {
         <label 
           htmlFor="email"
           className="px-2"
-        >Email:</label>
+        >
+          Email:
+        </label>
         <input
           id="email" 
           type="email" 
           className="border border-slate-300 p-2 rounded-lg"
+          placeholder="tu_correo@gmail.com"
           value={cliente.email}
           onChange={handleChange}
         />
@@ -97,13 +106,16 @@ const FormularioCliente = () => {
         <label 
           htmlFor="celular"
           className="px-2"
-        >Celular:</label>
+        >
+          Celular:
+        </label>
         <input
           id="celular" 
           type="text" 
           className="border border-slate-300 p-2 rounded-lg"
           minLength={10}
           maxLength={10}
+          placeholder="1122334455"
           value={cliente.celular}
           onChange={handleChange}
         />
