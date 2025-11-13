@@ -1,0 +1,29 @@
+# Node modules locales
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Archivos de dependencias temporales
+*.log
+*.tmp
+
+# Archivos del entorno local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Builds anteriores
+build
+dist
+
+# Archivos del sistema
+.DS_Store
+.git
+.gitignore
+.vscode
+.idea
+
+# Archivos de Docker
+Dockerfile
+docker-compose.yml
