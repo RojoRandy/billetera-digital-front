@@ -3,7 +3,7 @@ import DefaultLayout from "./layouts/DefaultLayout"
 import RegistroCliente from "./pages/RegistroCliente"
 import NotFound from "./pages/NotFound"
 import Billetera from "./pages/Billetera"
-import Pagos from "./pages/Pagos"
+import Compras from "./pages/Compras"
 import { Bounce, ToastContainer } from "react-toastify"
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
           <Route path="/" element={<DefaultLayout />}>
             <Route index element={<RegistroCliente />} />
             <Route path="billetera" element={<Billetera />} />
-            <Route path="pagos" element={<Pagos />} />
+            <Route path="compras" element={<Compras />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

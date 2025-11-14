@@ -5,7 +5,7 @@ import { NavLink } from "react-router"
 const navItems = [
   { to: "/", titulo: "Registro" },
   { to: "billetera", titulo: "Billetera" },
-  { to: "pagos", titulo: "Pagos" },
+  { to: "compras", titulo: "Compras" },
 ]
 
 const Navbar = () => {
