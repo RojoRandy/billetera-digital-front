@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'
 
 const ConfirmarCompra = () => {
 
-  const { confirmarCompra } = useCompraStore()
+  const { confirmarCompra, limpiarSesion } = useCompraStore()
   const [token, setToken] = useState('')
   const [error, setError] = useState('')
 
@@ -66,6 +66,13 @@ const ConfirmarCompra = () => {
         onClick={handleSubmit}
       >
         Confirmar Compra
+      </button>
+
+      <button
+        className="w-full border border-emerald-500 rounded-lg py-2 text-emerald-500 cursor-pointer hover:bg-emerald-500/20"
+        onClick={limpiarSesion}
+      >
+        Salir
       </button>
     </div>
   )

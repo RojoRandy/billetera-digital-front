@@ -6,12 +6,18 @@ import type { ApiResponse } from "../shared/api-response"
 
 export type CompraStore = {
   idSesion: string,
+  limpiarSesion: () => void
   registrarCompra: (compra:Compra) => Promise<ApiResponse<CompraResponse>>
   confirmarCompra: (token: string) => Promise<ApiResponse<boolean>>
 }
 
 export const useCompraStore = create<CompraStore>((set, get) => ({
   idSesion: '',
+  limpiarSesion: () => {
+    set({
+      idSesion: ''
+    })
+  },
   registrarCompra: async (compra:Compra): Promise<ApiResponse<CompraResponse>> => {
     const response = await RegistrarCompraAction(compra);
     console.log(response);
